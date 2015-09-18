@@ -1,0 +1,32 @@
+<%= form_for(@track) do |f| %>
+  <% if @track.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@track.errors.count, "error") %> prohibited this track from being saved:</h2>
+
+      <ul>
+      <% @track.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<form >
+  <div class="form-group">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="form-group">
+    <%= f.label :genre %><br>
+    <%= f.text_field :genre %>
+  </div>
+  <div class="form-group">
+    <%= f.label :url %><br>
+    <%= f.file_field :url %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+</form>
+
+<% end %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+<%= render "pages/header" %>
+<div class="inner">
+  <br>
+    <ul class="media-list">
+      <% @tracks.each do |track| %>
+      <li class="media">
+          <div class='media-middle'>
+            <%= audio_tag "#{track.url}" , controls: true %>
+            <br>
+            <strong class='media-header'><%= track.name %></strong>
+            <br>
+            <%= link_to 'Edit', edit_track_path(track) %> | <%= link_to 'Delete', track, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
+        </li>
+          <br>
+      <% end %>
+    </ul>
+  <br>
+</div>
+
+
+
+<%= link_to 'New Track', new_track_path %>

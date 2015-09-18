@@ -1,0 +1,10 @@
+<%= render "pages/header" %>
+<div class="inner cover">
+  <h1 class="cover-heading">Upload your favorite audio track</h1>
+  <p class="lead">click on add a track below and you'll be given the opportunity to add a song.</p>
+  <p class="lead">
+  <%= button_to "Add a Track", new_track_path, :class => "btn btn-lg btn-default", :method => :get %>
+  <br>
+  <%= button_to "Listen to Samples", tracks_path, :class => "btn btn-lg btn-default", :method => :get %>
+  </p>
+</div>

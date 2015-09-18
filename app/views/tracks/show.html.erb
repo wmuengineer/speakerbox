@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+
+<%= audio_tag "#{@track.url}" , controls: true %>
+
+
+<p>
+  <strong>Name:</strong>
+  <%= @track.name %>
+</p>
+<p>
+
+
+<p>
+  <strong>Genre:</strong>
+  <%= @track.genre %>
+</p>
+
+<%= link_to 'Edit', edit_track_path(@track) %> |
+<%= link_to 'Back', tracks_path %>
